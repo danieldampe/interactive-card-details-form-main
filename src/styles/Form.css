@@ -1,0 +1,110 @@
+/* 
+// *** *** *** Form *** *** ***
+*/
+.form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  grid-template-areas: 
+    'name name name name'
+    'num  num  num  num'
+    'exp  exp  cvc  cvc'
+    'btn  btn  btn  btn';
+  gap: .6rem;
+  max-width: 380px;
+}
+
+.form-cardholder-name { grid-area: name; }
+.form-card-number { grid-area: num; }
+.form-exp-date { grid-area: exp; }
+.form-cvc { grid-area: cvc; }
+.form-button { grid-area: btn; }
+
+/* 
+// *** *** *** Section *** *** ***
+*/
+.form-section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.form-section-txt { 
+  width: 100%; 
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  line-height: 2.1rem;
+  color: var(--c-very-dark-violet);
+}
+
+.msg-error {
+  position: absolute;
+  left: 0;
+  bottom: calc(0px - .05rem);
+  transform: translateY(100%);
+  font-size: .8rem;
+  color: var(--c-red);
+}
+
+/* 
+// *** *** *** Input *** *** ***
+*/
+.form-input { 
+  width: 100%;
+  max-width: 100%; 
+  padding: .65rem .9rem;
+  --b-width: 1.5px;
+  border: solid var(--b-width) var(--c-light-grayish-violet);
+  border-radius: .5rem;
+  color: var(--c-very-dark-violet);
+  cursor: pointer;
+}
+
+.form-input.error { border-color: var(--c-red); }
+
+.form-input:focus {
+  border: double var(--b-width) transparent;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, hsl(249, 99%, 64%),hsl(278, 94%, 30%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.form-input.error:focus {
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, var(--c-red), var(--c-red));
+}
+
+.form-input::placeholder { color: var(--c-dark-grayish-violet)}
+
+/* 
+// *** *** *** Exp date *** *** ***
+*/
+.form-exp-date { justify-content: space-between; }
+
+.form-input-exp-date-mm,
+.form-input-exp-date-yy { width: 48%; }
+
+/* 
+// *** *** *** Button *** *** ***
+*/
+.form-button { margin-top: 1.15rem; }
+
+@media screen and (min-width: 1024px) {
+  .form { 
+    margin-left: 12rem; 
+    column-gap: 1.3rem;
+    row-gap: 1rem;
+  }
+
+  .form-section-txt { font-size: .775rem; }
+
+  .form-input-exp-date-mm,
+  .form-input-exp-date-yy { width: 47.25%; }
+
+  .form-button { margin-top: 1.5rem; }
+}
+
+@media screen and (min-width: 1250px) {
+  .form { margin-left: 7.65rem; }
+}

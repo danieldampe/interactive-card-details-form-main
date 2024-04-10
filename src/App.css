@@ -1,0 +1,93 @@
+:root {
+  --w-mob: 375px;
+  --w-desk: 1440px;
+  --f-size: 18px;
+  --c-linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /* active input border */
+  --c-red: hsl(0, 100%, 66%); /* input errors */
+  --c-white: hsl(0, 0%, 100%);
+  --c-light-grayish-violet: hsl(270, 3%, 87%);
+  --c-dark-grayish-violet: hsl(279, 6%, 55%);
+  --c-very-dark-violet: hsl(278, 68%, 11%);
+}
+
+/* 
+// *** *** *** Root *** *** ***
+*/
+#root {
+  width: max(100%, 320px);
+  min-height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: var(--f-size);
+}
+
+/* 
+// *** *** *** Interactive Card Details *** *** ***
+*/
+.interactive-card-details {
+  display: flex;
+  flex-direction: column;
+  --w-card-mob: 287px;
+  --card-aspect-radio: 1 / .542;
+}
+
+.interactive-card-details-top {
+  display: flex;
+  justify-content: center;
+  height: 15rem;
+  background-image: url(/images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+.interactive-card-details-top-content { position: relative; }
+
+.interactive-card-details-bottom {
+  display: flex;
+  justify-content: center;
+  padding-block: 5.1rem 2.85rem;
+  padding-inline: 1.5rem;
+}
+
+.card { border-radius: .65rem; }
+
+.button {
+  padding: 1rem;
+  border-radius: .5rem;
+  color: var(--c-white);
+  background-color: var(--c-very-dark-violet);
+}
+
+@media screen and (min-width: 1024px) {
+  /* 
+  // *** *** *** Root *** *** ***
+  */
+  #root { min-height: 900px; }
+
+  /* 
+  // *** *** *** Interactive Card Details *** *** ***
+  */
+  .interactive-card-details { 
+    flex-direction: row; 
+    min-height: inherit;
+    --w-card-mob: 448px;
+  }
+
+  .interactive-card-details-top { 
+    align-items: center;
+    width: 33.55%; 
+    min-height: inherit;
+    background-image: url(/images/bg-main-desktop.png);
+  }
+
+  .interactive-card-details-top-content { margin-right: 9rem; }
+
+  .interactive-card-details-bottom {
+    align-items: center;
+    flex-grow: 1;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .interactive-card-details-top-content { margin-right: 0; }
+}

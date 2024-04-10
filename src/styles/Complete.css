@@ -1,0 +1,39 @@
+/* 
+// *** *** *** Complete *** *** ***
+*/
+.complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.complete-hdr { margin-bottom: 2.7rem; }
+
+.complete-title { 
+  margin-bottom: 1.15rem;
+  font-weight: 100;
+  letter-spacing: .23rem;
+  text-transform: uppercase; 
+}
+
+.complete-txt {
+  font-size: 1.12rem;
+  color: #9d999f;
+}
+
+.complete-body { margin-bottom: 2.85rem; }
+
+.complete-ftr { width: 100%; }
+
+.complete-button { width: inherit; }
+
+@media screen and (min-width: 1024px) {
+  .complete { margin-left: 12rem; }
+}
+
+@media screen and (min-width: 1250px) {
+  .complete { margin-left: 7.65rem; }
+}

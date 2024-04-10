@@ -1,0 +1,63 @@
+/* 
+// *** *** *** Card Front *** *** ***
+*/
+.card-front {
+  position: absolute;
+  right: -7.15rem;
+  bottom: -2.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--w-card-mob);
+  aspect-ratio: var(--card-aspect-radio);
+  padding: 1rem 1.35rem;
+  color: var(--c-white);
+  background-image: url(/images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* 
+// *** *** *** Header *** *** ***
+*/
+.card-front-logo { width: 22.5%; }
+
+/* 
+// *** *** *** Body *** *** ***
+*/
+.card-front-number {
+  margin-top: 1.1rem; 
+  letter-spacing: .135rem; 
+}
+
+/* 
+// *** *** *** Footer *** *** ***
+*/
+.card-front-ftr {
+  display: flex;
+  justify-content: space-between;
+  font-size: .6rem;
+  letter-spacing: .07rem;
+  text-transform: uppercase; 
+}
+
+@media screen and (min-width: 1024px) {
+  .card-front {
+    top: calc(50% - 8.8rem);
+    left: calc(50% + 9.1rem);
+    bottom: initial;
+    right: initial;
+    transform: translate(-50%, -50%);
+    padding: 1.7rem 1.95rem;
+  }
+
+  .card-front-number {
+    font-size: 1.85rem;
+    letter-spacing: .155rem;
+  }
+
+  .card-front-ftr {
+    font-size: .95rem;
+    letter-spacing: .08rem;
+  }
+}

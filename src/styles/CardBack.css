@@ -1,0 +1,35 @@
+/* 
+// *** *** *** Card Back *** *** ***
+*/
+.card-back { 
+  position: absolute;
+  top: 1.95rem;
+  left: -7.35rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: var(--w-card-mob);
+  aspect-ratio: var(--card-aspect-radio);
+  background-image: url(/images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.card-back-cvc {
+  margin-bottom: 1%;
+  margin-right: 12.9%;
+  font-size: .725rem;
+  color: var(--c-white);
+}
+
+@media screen and (min-width: 1024px) {
+  .card-back {
+    top: calc(50% + 9rem);
+    left: calc(50% + 14.85rem);
+    bottom: initial;
+    right: initial;
+    transform: translate(-50%, -50%);
+  }
+
+  .card-back-cvc { font-size: .95rem; }
+}
