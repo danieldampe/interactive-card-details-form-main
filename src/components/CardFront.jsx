@@ -5,7 +5,7 @@ export function CardFront ({ form }) {
   return (
     <div className='card-front card'>
       <header className='card-front-hdr'>
-        <img className='card-front-logo' src='/images/card-logo.svg' alt='Card Logo' />
+        <img className='card-front-logo' src='images/card-logo.svg' alt='Card Logo' />
       </header>
       <div className='card-front-body'>
         <div className='card-front-number'>

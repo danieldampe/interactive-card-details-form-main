@@ -5,7 +5,7 @@ export function Complete ({ reset }) {
   return (
     <div className='complete'>
       <header className='complete-hdr'>
-        <img src='/images/icon-complete.svg' alt='Icon Complete' />
+        <img src='images/icon-complete.svg' alt='Icon Complete' />
       </header>
       <div className='complete-body'>
         <h2 className='complete-title'>Thank you!</h2>
